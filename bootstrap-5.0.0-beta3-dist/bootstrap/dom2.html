@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="background-color: bisque; width: 300px; height:300px" onmouseover='style.backgroundColor="red"' onmouseout='style.backgroundColor="green"'>
+        Lorem ipsum dolor sit amet.
+    </div>
+
+    <br>
+    <input id="texto" type="text" onkeydown="cambiar()">
+    <br>
+    <label id="eti"> HOLA </label>
+
+    <script>
+        function cambiar()
+        {
+            document.getElementById("eti").innerHTML=document.getElementById("texto").value
+
+        }
+
+        document.getElementsByTagName("div").onmouseover="style:'background-color: red'"
+    </script>
+</body>
+</html>

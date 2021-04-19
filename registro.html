@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Registro</title>
+  <style>
+    #barra {
+      border-top: 2px solid #999;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container p-2 my-4">
+    <div class="row mt-4">
+      <div class="col-6 pt-5 mt-5 pr-5">
+        <img src="imagenes/imagen.jpg" class="img-fluid" alt="Responsive image">
+      </div>
+      <div class="col-6 pt-5 mt-4 pl-5" style="border-left: 2px solid #999;">
+        <form style="text-align: center;">
+          <div class="input-group mb-4 mr-sm-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><i class="fas fa-user"></i></div>
+            </div>
+            <input type="text" class="form-control" id="usuario" placeholder="Usuario">
+          </div>
+          <div class="input-group mb-4 mr-sm-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><i class="fas fa-lock"></i></div>
+            </div>
+            <input type="password" class="form-control" id="contraseña" placeholder="Contraseña">
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary" onclick="enviar_registro()" style="width: 400px;"> Crear una
+              cuenta</button>
+
+          </div>
+          <div class="form-group">
+            <div class="row justify-content-center">
+              <div class="col-5 p-0">
+                <hr id="barra"></hr>
+              </div>
+              <div class="col-1 pt-1">
+                <p style="text-align:center;"> O </p>
+              </div>
+              <div class="col-5 p-0">
+                <hr id="barra"></hr>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn" style="background-color: #4267b2; color: white; width: 400px;"> <i
+                class="fab fa-facebook-f"></i> Continuar con facebook </button>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn" style="background-color: #42aeec; color: white; width: 400px;"> <i
+                class="fab fa-twitter"></i> Continuar con twitter </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+    function enviar_registro() {
+      var usuario = document.getElementById("usuario").value
+      var contraseña = document.getElementById("contraseña").value
+
+      let cliente1 = new cliente(usuario, contraseña);
+
+      localStorage.setItem(usuario, JSON.stringify(cliente1));
+
+      //definimos el Objeto con propiedades y metodos
+      var cliente = {
+        usuario,
+      }
+      function cliente(usuario, contraseña) {
+        this.usuario = contraseña;
+      }
+    }
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

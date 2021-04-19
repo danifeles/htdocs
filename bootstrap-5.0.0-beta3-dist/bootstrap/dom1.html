@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>Informatica</li>
+        <li>Matematicas</li>
+        <li>Ciencias</li>
+        <li>Matematicas</li>
+    </ul>
+    <ul>
+        <li>lengua</li>
+        <li>idiomas</li>
+        <li>Ciencias</li>
+        <li>Matematicas</li>
+    </ul>
+    <ul>
+        <li>Informatica</li>
+        <li>historia</li>
+        <li>lengua</li>
+        <li>Matematicas</li>
+    </ul>
+    <button onclick="titulo()">CAMBIAR TÍTULO</button>
+    <script>
+    function titulo(){
+
+var uls_ = document.getElementsByTagName("ul")
+
+for(i in uls_){
+
+    var lis_ = uls_[i].getElementsByTagName("li")
+
+        lis_[0].innerHTML = '<p style="background-color: rgb(236, 33, 33);"> Titulo</p>'
+    }
+}
+    </script>
+    <script>
+
+        function cambio(){
+        var mates = document.getElementsByTagName("li")
+        for(i in mates){
+            if(mates[i].innerHTML == "Matematicas"){
+                mates[i].innerHTML = "Lengua"
+            }
+        }
+    }
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Mi primer ejemplo de JavaScript y Bootstrap</h1>
+        <div class="row">
+            <div class="col-sm-6" style="background-color: rgb(123, 255, 47);">Primer columna</div>
+            <div class="col-sm-6" id="columna2">Poner nombre y apellidos</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4" style="background-color: cyan;">Mis Datos personales</div>
+            <div class="col-sm-8">
+                <table class="table table-danger table-hover table-striped">
+                    <tr>
+                        <th>
+                            Nombre
+                        </th>
+                        <th>
+                            Apellidos
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Alberto
+                        </td>
+                        <td>
+                            Rodriguez
+                        </td>
+                    <tr>
+                        <td id="nombre">
+                            Rosa
+                        </td>
+                        <td id="apellidos">
+                            Garcia
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Pedro
+                        </td>
+                        <td>
+                            Romero
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            
+        </div>
+        <div class="row" style="background-color: gray;">
+            <div class="col">
+                <h3>FORMULARIO DE ENTRADA</h3>
+                <form>
+                    <div class="form-group">
+                        <label  for="ln1" >Numero 1</label>
+                        <input class="form-control" type="text" id="num1" placeholder="Introduzca numero" name="nombre">
+                        <label  for="ln2" >Numero 2 </label>
+                        <input class="form-control" type="text" id="num2" placeholder="Introduzca numero" name="nombre">
+                        <br/>
+                        <label id="resultado1" for="resultado" style="background-color: green;">Resultado</label>
+                    </div>
+                   
+
+
+                    <input type="button" class="btn btn-danger" value="SUMAR" onclick="sumar()">
+                </form>
+
+            </div>
+        </div>
+        <script src="funciones2.js"></script>
+</body>
+
+</html>

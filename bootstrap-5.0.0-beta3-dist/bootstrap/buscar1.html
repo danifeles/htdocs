@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="principal">
+    <p onclick="this.innerHTML='hola'">Esto es un ejemplo</p>
+    <p onclick="this.style.backgroundColor='green' ">
+    Esto es otro ejemplo</p>
+
+    </div>
+    <p>Este es un tercer parrafo</p>
+    <script>
+        
+        var parrafos=document.getElementsByTagName("p")
+        document.write(parrafos.length)
+        document.write(parrafos[0].innerHTML)
+        document.write(parrafos[2].innerHTML)
+        document.getElementById("principal") .style.background="red"
+        /*      
+        for(objeto in parrafos){
+            document.write(parrafos[objeto].innerHTML)
+        }
+        //parrafo.innerHTML="hola"*/
+    </script>
+</body>
+</html>
