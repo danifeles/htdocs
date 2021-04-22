@@ -9,9 +9,12 @@
 		},
 		{
 			"path": "../../../../Users/danielafeles/practicas/node/apli1"
+		},
+		{
+			"path": "../../../../Users/danielafeles/Downloads/conecta4"
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "htdocs"
+		"liveServer.settings.multiRootWorkspaceName": "HTML"
 	}
 }

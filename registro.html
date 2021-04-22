@@ -26,66 +26,101 @@
       </div>
       <div class="col-6 pt-5 mt-4 pl-5" style="border-left: 2px solid #999;">
         <form style="text-align: center;">
-          <div class="input-group mb-4 mr-sm-2">
-            <div class="input-group-prepend">
-              <div class="input-group-text"><i class="fas fa-user"></i></div>
+          <div class="form-row mb-3 align-items-center">
+            <div class="col-sm-6 my-1">
+              <input type="text" class="form-control" id="nombre" placeholder="Nombre">
             </div>
-            <input type="text" class="form-control" id="usuario" placeholder="Usuario">
-          </div>
-          <div class="input-group mb-4 mr-sm-2">
-            <div class="input-group-prepend">
-              <div class="input-group-text"><i class="fas fa-lock"></i></div>
+            <div class="col-sm-6 my-1">
+              <input type="text" class="form-control" id="apellidos" placeholder="Apellidos">
             </div>
-            <input type="password" class="form-control" id="contraseña" placeholder="Contraseña">
           </div>
-          <div class="form-group">
-            <button type="submit" class="btn btn-primary" onclick="enviar_registro()" style="width: 400px;"> Crear una
-              cuenta</button>
+          <div class="form-row mb-3 align-items-center">
+            <div class="col-sm-12 my-1">
+              <div class="input-group mr-sm-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text"><i class="fas fa-user"></i></div>
+                </div>
+                <input type="text" class="form-control" id="usuario" placeholder="Usuario">
+              </div>
+            </div>
+          </div>
+          <div class="form-row mb-3 align-items-center">
+            <div class="col-sm-12 my-1">
+              <div class="input-group mr-sm-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text"><i class="fas fa-phone"></i></div>
+                </div>
+                <input type="tel" class="form-control" id="tel" placeholder="Teléfono">
+              </div>
+            </div>
+          </div>
+          <div class="form-row mb-3 align-items-center">
+            <div class="col-sm-12 my-1">
+              <div class="input-group mr-sm-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text"><i class="fas fa-envelope"></i></div>
+                </div>
+                <input type="email" class="form-control" id="correo" placeholder="Correo electrónico">
+              </div>
+            </div>
+          </div>
+          <div class="form-row mb-3 align-items-center">
+            <div class="col-sm-6 my-1">
+              <div class="input-group mr-sm-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text"><i class="fas fa-lock"></i></div>
+                </div>
+                <input type="password" class="form-control" id="contrasena" placeholder="Contraseña">
+                <span id='message'></span>
+              </div>
+            </div>
+            <div class="col-sm-6 my-1">
+              <div class="input-group mr-sm-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text"><i class="fas fa-lock"></i></div>
+                </div>
+                <input type="password" class="form-control" id="confirmarcontrasena" placeholder="Confirmar contraseña">
+              </div>
+            </div>
+          </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" onclick="enviar_registro()" style="width: 400px;"> Crear una
+          cuenta</button>
 
-          </div>
-          <div class="form-group">
-            <div class="row justify-content-center">
-              <div class="col-5 p-0">
-                <hr id="barra"></hr>
-              </div>
-              <div class="col-1 pt-1">
-                <p style="text-align:center;"> O </p>
-              </div>
-              <div class="col-5 p-0">
-                <hr id="barra"></hr>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <button type="submit" class="btn" style="background-color: #4267b2; color: white; width: 400px;"> <i
-                class="fab fa-facebook-f"></i> Continuar con facebook </button>
-          </div>
-          <div class="form-group">
-            <button type="submit" class="btn" style="background-color: #42aeec; color: white; width: 400px;"> <i
-                class="fab fa-twitter"></i> Continuar con twitter </button>
-          </div>
-        </form>
       </div>
+      <div class="form-group">
+        <div class="row justify-content-center">
+          <div class="col-5 p-0">
+            <hr id="barra">
+            </hr>
+          </div>
+          <div class="col-1 pt-1">
+            <p style="text-align:center;"> O </p>
+          </div>
+          <div class="col-5 p-0">
+            <hr id="barra">
+            </hr>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn" style="background-color: #4267b2; color: white; width: 400px;"> <i
+            class="fab fa-facebook-f"></i> Continuar con facebook </button>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn" style="background-color: #42aeec; color: white; width: 400px;"> <i
+            class="fab fa-twitter"></i> Continuar con twitter </button>
+      </div>
+      <div class="form-inline justify-content-center">
+        <label for="boton"> ¿Ya estás registrado? </label>
+        <button type="button" id="boton" class="btn"><a href="index.html"> Entrar
+          </a></button>
+      </div>
+      </form>
     </div>
   </div>
-  <script>
-    function enviar_registro() {
-      var usuario = document.getElementById("usuario").value
-      var contraseña = document.getElementById("contraseña").value
-
-      let cliente1 = new cliente(usuario, contraseña);
-
-      localStorage.setItem(usuario, JSON.stringify(cliente1));
-
-      //definimos el Objeto con propiedades y metodos
-      var cliente = {
-        usuario,
-      }
-      function cliente(usuario, contraseña) {
-        this.usuario = contraseña;
-      }
-    }
-  </script>
+  </div>
+  <script src="inicio.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
